@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/.*": true,
+        "**/node*": true,
+        "**/yarn*": true,
+        "**/dist": true
+    },
+    "editor.tabSize": 2
+}
