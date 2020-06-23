@@ -1,0 +1,47 @@
+$panel-height: 90vh;
+
+.al-billboard {
+  overflow: hidden;
+  background-color: black;
+  height: $panel-height;
+  width: 100%; 
+
+  > .bkg {
+    position: absolute;
+    overflow: hidden;
+    width: 65%;
+    height: $panel-height;
+    // filter: brightness(40%);
+
+    img {
+      // filter: blur(5px);
+      left: -5%;
+      top: -5%;
+      position: relative;
+      width: 110%;
+      height: 110%;
+      object-fit: cover;
+    }
+
+    #gradient-radial {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 35%, #000 97%);
+    }
+
+    #gradient-linear {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      
+      background: rgb(0,0,0);
+      background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%);
+    }
+  }
+}
