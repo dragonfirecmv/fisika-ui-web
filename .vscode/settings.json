@@ -3,7 +3,8 @@
         "**/.*": true,
         "**/node*": true,
         "**/yarn*": true,
-        "**/dist": true
+        "**/dist": true,
+        "src/index.html": true
     },
     "editor.tabSize": 2
 }
