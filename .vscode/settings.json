@@ -4,7 +4,7 @@
         "**/node*": true,
         "**/yarn*": true,
         "**/dist": true,
-        "src/index.html": true
+        "src/index.html": false
     },
     "editor.tabSize": 2
 }

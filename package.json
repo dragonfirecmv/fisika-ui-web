@@ -1,7 +1,12 @@
 {
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "alias": {
+    "app": "./src/components",
+    "assets": "./assets",
+    "components": "./src/components"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
