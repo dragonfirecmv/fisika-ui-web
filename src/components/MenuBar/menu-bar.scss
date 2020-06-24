@@ -4,15 +4,15 @@
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 
-  .contents {
+  .menu-contents {
     width: 100%;
     height: 100%;
     
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: minmax(210px, auto) 1fr minmax(210px, auto);
     grid-template-rows: 1fr;
     gap: 1px 1px;
-    grid-template-areas: "area-logo area-tabs .";
+    grid-template-areas: "area-logo area-tabs area-misc";
 
     .area-logo {
       height: 100%;
@@ -25,6 +25,19 @@
       img {
         height: 48px;
       }
+    }
+
+    .area-tabs {
+      height: 100%;
+      grid-area: area-tabs;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .area-misc {
+      grid-area: area-misc;
     }
   }
 }
