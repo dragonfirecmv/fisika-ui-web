@@ -8,9 +8,12 @@
     "react-dom": "preact/compat",
     "app": "./src/components",
     "assets": "./assets",
-    "components": "./src/components"
+    "components": "./src/components",
+    "routes": "./src/routes"
   },
   "devDependencies": {
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.8",
@@ -18,6 +21,11 @@
   },
   "dependencies": {
     "preact": "^10.4.4",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "routes": "^2.1.0",
+    "store": "^2.0.12",
     "styled-components": "^5.1.1"
   }
 }
