@@ -1,20 +1,21 @@
-import { h } from 'preact';
+import { h, FunctionalComponent } from 'preact';
 import { Container } from 'components/Container'
-import SiteLogoEN from "assets/images/en-site-logo.png"
+import { MenuBarTabs, IMenuBarTab } from './_menu-tab';
 import './menu-bar.scss'
-import { MenuBarTabs } from './_menu-tab';
 
-export const MenuBar = () => {
 
+export const MenuBar: FunctionalComponent<IMenuBarProps> = (props) => {
   return (
     <div className="menu-bar">
       <Container>
         <div className="menu-contents">
           <div className="area-logo">
-            <img src={SiteLogoEN}/>
+            {props.siteLogo && <img src={props.siteLogo}/>}
           </div>
           <div className="area-tabs">
-            <MenuBarTabs/>
+            <MenuBarTabs 
+              tabs={props.tabs} 
+              onTabClick={props.onTabClick}/>
           </div>
           {/* <div className="area-misc">
             X
@@ -23,4 +24,14 @@ export const MenuBar = () => {
       </Container>
     </div>
   )
+}
+
+interface IMenuBarProps {
+  siteLogo?: string | any
+  tabs: IMenuBarTab[]
+  onTabClick?: (e: MouseEvent | TouchEvent, link: string) => void
+}
+
+export {
+  IMenuBarTab
 }
